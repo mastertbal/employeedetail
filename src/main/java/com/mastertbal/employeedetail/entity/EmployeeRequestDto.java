@@ -50,6 +50,9 @@ public class EmployeeRequestDto {
     @PastOrPresent(message = "Date of joining cannot be in the future")
     private LocalDate dateOfJoining;
 
+    @NotNull(message = "Active cannot be null")
+    @NotBlank(message = "Active cannot be blank")
+    @NotEmpty(message = "Active cannot be empty")
     private Boolean active;
 
     private LocalDate createdAt;
